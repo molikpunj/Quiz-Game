@@ -60,12 +60,12 @@ def printques(questions):
         for option in question["choice"]:
             print(option)
         answer = input("Enter your answer(A, B, C or D):")
-        if (answer == question["correct"]):
+        if (answer.upper() == question["correct"]):
             print("Correct!")
             score += 1
         else:
-            print("Wrong!")
+            print(f"Wrong! The correct choice would have been {question["correct"]}")
         print("Your Score: ", score, "\n")
-    
+    print(f"Your total score out of 10 is: {score}")
 
 printques(questions)
